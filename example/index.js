@@ -1,13 +1,18 @@
-import vFixed from '../src/index.js'
+import vAnchor from '../src/index.js'
 
 const { Vue } = window
 
-Vue.use(vFixed)
+Vue.use(vAnchor)
 
 new Vue({
   el: '#app',
   data: {
-    message: 'hello!',
-    show_trigger: true
+    index: -1
+  },
+  methods: {
+    getIndex(index) {
+      this.index = index
+      console.log(index)
+    }
   }
 })

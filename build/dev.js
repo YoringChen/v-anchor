@@ -12,4 +12,4 @@ var server = new webpackDevServer(webpack(config), {
   }
 })
 
-server.listen(8081)
+server.listen(8082)
