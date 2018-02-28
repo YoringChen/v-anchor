@@ -8,15 +8,22 @@
     <meta content="telephone=no" name="format-detection">
     <title>测试</title>
     <style>
-      .test-ele { background-color: #999;height:50px; }
-      .placeholder-ele { height:1000px;background-color: #666;color:#fff;font-size:32px;text-align: center;line-height: 500px }
+      #app { height:2000px; }
+      .log { position:fixed;z-index:2;left:0;top:0;right:0;background-color: #fff; }
+      .test-block { background-color: #ccc;margin-bottom:10px;display: flex;justify-content: center;align-items: center;color:#fff;font-size:32px; }
+      .test-block1 { height:60vh; }
+      .test-block2 { height:65vh; }
+      .test-block3 { height:75vh; }
+      .test-block4 { height:85vh; }
     </style>
   </head>
   <body>
     <div id="app">
-      <button @click="show_trigger = !show_trigger">Switch</button>
-      <div class="test-ele" v-fixed v-if="show_trigger"></div>
-      <div class="placeholder-ele">{{ message }}</div>
+      <div class="log">{{ index }}</div>
+      <div class="test-block test-block1" v-anchor="getIndex">0</div>
+      <div class="test-block test-block2" v-anchor="getIndex">1</div>
+      <div class="test-block test-block3" v-anchor="getIndex">2</div>
+      <div class="test-block test-block4" v-anchor="getIndex">3</div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.4.4/dist/vue.min.js"></script>
   </body>
