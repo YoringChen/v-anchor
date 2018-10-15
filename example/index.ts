@@ -1,6 +1,17 @@
-import Say from '../src'
+import vAnchor from '../src'
 
-const say = new Say()
+window.Vue.use(vAnchor)
 
-/* eslint no-console: off */
-console.log(say.sayHelloWorld())
+/* eslint no-new: 'off' */
+new window.Vue({
+  el: '#app',
+  data: {
+    index: -1
+  },
+  methods: {
+    getIndex (index: number): void {
+      (this as any).index = index
+      console.log(index)
+    }
+  }
+})
