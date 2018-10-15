@@ -1,7 +1,5 @@
-# webpack config
-config/*
-
-# build files
-
-dist/*
-
+/config/
+/build/
+/dist/
+/*.js
+/index.html
